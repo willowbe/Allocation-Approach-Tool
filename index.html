@@ -1,5 +1,29 @@
 <!DOCTYPE html>
 <html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+color: #05386B;
+font-family: Comfortaa;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet"
@@ -10,7 +34,7 @@
     <section id="overlay">
 <h1>Welcome to the Allocation Approach Selection Tool!</h1>
       <p>Hello! This is the <i>betta </i> <sup><sup>(haha get it?)</sup></sup> version of a tool that can help you select the best allocation approach for your fishery
-based on the information you put into it! Feel free to hover over any <u>[info]</u> box for a quick definition of the phrase. 
+based on the information you put into it! Feel free to hover over any <span class="tooltip"><u>[info]</u><span class="tooltiptext"><sub><sub>yep, just like that!</sub></sub></span></span> box for a quick definition of the phrase. 
  <p>
 <body>
 
