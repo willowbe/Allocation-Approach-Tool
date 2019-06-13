@@ -63,7 +63,12 @@ color:  #5CDB95;
     font-size: 28px;
     font-weight: bold;
   }
-
+  .close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
   .close:hover,
   .close:focus {
     color: #000;
@@ -108,30 +113,84 @@ color:  #5CDB95;
 
 </div>
 
+
+<button id="myBtn2">Flexible Portfolios</button>
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+    <div class="approach-title">
+    <h2>Flexible Portfolios<h2>
+    </div>
+    <h3>Category: Future & Adaptation</h3>
+    <p>Allocate shares of a multi-species fishery or species complex. Fishermen receive a % of the whole group of species (e.g., % of the “groundfish fishery” or of a “flatfish complex”). Then, assess stock status of each species each year and distribute actual pounds of each that can be caught that season. Permanent % shares are stable while the annual pounds fluctuate with abundance.</p>
+    <h3>Good Fit For: <h3>
+      <p>Multispecies fisheries, fisheries where species undergo wide swings in abundance </p>
+
+    <h3>Essentials: </h3>
+    <ul>
+      <li>Track abundance at species level</li>
+      <li>Track catch at species level</li>
+      <li>Administration capacity for changing quota pound amount annually</li>
+      <li>Ability and willingness of fishery participant to trade annual QP rapidly</li>
+    </ul>
+    <h3>Potential Trade-Offs: </h3>
+      <ul>
+        <li>May create challenge with fishery specialization/ niche, which can create challenges with economic viability</li>
+        <li>Requires a lot of data</li>
+      </ul>
+      <h3>Additional Notes: </h3>
+      <p>Further stability could be created if quotas straddle a larger space and substantially cover the full species ranges.</p>
+  </div>
+
+</div>
+
+
+
+
+
+
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
-
+var modal2 = document.getElementById("myModal2");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
+var btn2 = document.getElementById("myBtn2");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+btn2.onclick = function() {
+  modal2.style.display = "block";
 }
 
+// When the user clicks on <span> (x), close the modal
+// THIS IS SUPER BUGGY. YOU SHOULD NOT HAVE TO MAKE TWO COPIES OF THE CLASS/METHODS TO GET IT TO WORK FOR EACH BUTTON!!!!!! FIX THIS
+span.onclick = function() {
+  modal.style.display = "none";
+  modal2.style.display = "none";
+}
+span2.onclick = function() {
+  modal.style.display = "none";
+  modal2.style.display = "none";
+}
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
   }
 }
 </script>
