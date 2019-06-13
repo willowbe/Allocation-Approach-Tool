@@ -15,6 +15,18 @@ background-color: #5CDB95;
 height: 100%;
 width: 100%;
 }
+button {
+  background-color: #05386B;
+  border: none;
+  color: #EDF5E1;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Comfortaa;
+  border-radius: 8px;
+}
 h1{
 color: #05386B;
 font-family: Comfortaa;
@@ -58,4 +70,4 @@ color: #05386B;
 background-color: #EDF5E1;
 font-size: 100%;
 font-family: Comfortaa;
-} 
+}
