@@ -25,7 +25,11 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+p{
+  font-size: 100%;
+  color: #05386B;
 
+}
   /* Modal Content */
   .modal-content {
     background-color: #5CDB95;
@@ -33,8 +37,13 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font-size: 12px;
+    text-align: left;
   }
-
+/* Approach Title */
+.approach-title{
+  text-align: center;
+}
   /* The Close Button */
   .close {
     color: #aaaaaa;
@@ -55,7 +64,7 @@
 <h1>Your recommended approaches are...<h1>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Bitcoin Allocation</button>
+<button id="myBtn">Banking on the Future</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -63,7 +72,26 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>This is where I would put the information... I will make a template for the information sometime soon. Center align please!</p>
+    <div class="approach-title">
+    <h1>Banking on the Future<h1>
+    </div>
+    <h3>Category: Future & Adaptation</h3>
+    <p>A participatory process is first used to achieve consensus on desired management strategy, based on upside projections. The projected yield for the chosen strategy is then allocated, via a multi-criterion allocation formula based on fishery values.</p>
+    <h3>Good Fit For: <h3>
+      <p>Species with well known life history and resilient to shifts</p>
+
+    <h3>Essentials: </h3>
+    <ul>
+      <li>Information about the species to populate parameters for modeling</li>
+      <li>Willingness of community to collaborate/cooperate</li>
+      <li>Criteria for eligibility</li>
+    </ul>
+    <h3>Potential Trade-Offs: <h3>
+      <ul>
+        <li>Challenging for new entrants</li>
+      </ul>
+      <h3>Additional Notes: </h3>
+      <p>What happens if projections are too low? Too high? You need defaults.</p>
   </div>
 
 </div>
