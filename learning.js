@@ -9,18 +9,28 @@ $(document).ready(function(){
 function select()
 {
    $('#approaches div').hide();
+
    var $div=$('#approaches div');
    var check=false;
    var filter = [];
-   $('input[type="checkbox"]:checked').each(function(){
-           var css=$(this).val();
-           //$div=$div.filter('.'+css);
-           filter.push('.'+css);
 
-       //check=true;
+   $('ul').each(function()
+   {
+     filter = [];
+     check = false;
+
+     $(this).find('input[type="checkbox"]:checked').each(function()
+     {
+           var css=$(this).val();
+           filter.push('.'+css);
+           check = true;
+     });
+
+     if (check)
+     {
+       $div = $div.filter(filter.join(','));
+     }
    })
 
-   $div.filter(filter.join(',')).show();
-
-   //if(check==true || check==false) $div.show();
+   $div.show();
 }
