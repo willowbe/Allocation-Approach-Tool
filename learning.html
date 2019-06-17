@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
-<style>
+<!--<style>
 #wrapper {width: 640px;overflow: auto;}
 ul li {list-style-type: none;}
 #approaches {width: 300px;float: left;}
 #selections {width: 330px;float: left;}
-</style>
+</style>-->
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  color: #05386B;
+  text-align: center;
+  border-radius: 0px;
+  padding: 0px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -19,7 +41,9 @@ ul li {list-style-type: none;}
   <div id="wrapper">
     <div id="content">
         <div id="heading">
-            <h1 class="inline">An Excellent Choice!</h1>
+          <h2 style="text-align: center;">An excellent choice!</h2>
+                    <span><h4>Just kidding, you didn't really have a choice. Anyways, please check off the goals that are most important to your fishery.</h4></span>
+          		<h6>You'll receive recommendations on the next page for allocation approaches that fit your needs!</h6>
         </div>
 
         <div id="selections">
@@ -27,55 +51,81 @@ ul li {list-style-type: none;}
 			<ul class="goals"> <!-- previously apt-opper-->
       <li >
         <input type="checkbox" value="1" />
-        <label for="1">Addressing the needs of future generations</label>
+        <label for="1">Addressing the needs of future generations
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Conserving nonrenewable resources for the future, helping renewable resources to recover, etc. </sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="2" />
-        <label for="2">Countering undesirable social impacts of market momentum</label>
+        <label for="2">Countering undesirable social impacts of market momentum
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring that price changes that may affect people’s livelihoods are accounted for (?)</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="3" />
-        <label for="3">Enhancing economic viability and security (reducing transaction costs?)</label>
+        <label for="3">Enhancing economic viability and security (reducing transaction costs?)
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Reducing transaction costs, ensuring the fishery will be profitable in the future, providing job security to fishermen, etc.</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="4" />
-        <label for="4">Ensuring the welfare of people dependent on the fishery</label>
+        <label for="4">Ensuring the welfare of people dependent on the fishery
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Providing them stable jobs in a healthy and profitable fishery</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="5" />
-        <label for="5">Facilitating inclusiveness and participation</label>
+        <label for="5">Facilitating inclusiveness and participation
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Making sure diverse demographics are represented by providing them opportunities to participate in the fishery</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="6" />
-        <label for="6">Fostering adaptation and resilience</label>
+        <label for="6">Fostering adaptation and resilience
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving the community’s ability to respond to and recover from change </sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="7" />
-        <label for="7">Generating better and more diverse information for management</label>
+        <label for="7">Generating better and more diverse information for management
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving data collection methods, gathering more comprehensive data about the fishery</sup></sup></span></div>
+      </label>
       </li>
     <li >
       <input type="checkbox" value="8" />
-      <label for="8">Improving collaboration, cooperation, and compliance</label>
+      <label for="8">Improving collaboration, cooperation, and compliance
+      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Helping the community to work together and follow the rules of the fishery</sup></sup></span></div>
+    </label>
     </li>
     <li >
       <input type="checkbox" value="9" />
-      <label for="9">Incentivizing conservation</label>
+      <label for="9">Incentivizing conservation
+      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Motivating members of the community to use resources mindfully to reduce waste</sup></sup></span></div>
+    </label>
     </li>
       <li >
         <input type="checkbox" value="10" />
-        <label for="10">Procedural justice</label>
+        <label for="10">Procedural justice
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in allocation processes</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="11" />
-        <label for="11">Promoting social justice</label>
+        <label for="11">Promoting social justice
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in wealth distribution and privileges</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="12" />
-        <label for="12">Protecting the supporting ecosystem</label>
+        <label for="12">Protecting the supporting ecosystem
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>This means both the community of organisms as well as their surrounding environment</sup></sup></span></div>
+      </label>
       </li>
       <li >
         <input type="checkbox" value="13" />
-        <label for="13">Resolving conflict between marine sectors</label>
+        <label for="13">Resolving conflict between marine sectors
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Psst: <a href="http://fisherysolutionscenter.edf.org/virtual-fisheries-academy-e-courses" target="_blank">EDF's Virtual Fisheries Academy</a> has a great description of this!</sup></sup></span></div>
+      </label>
       </li>
 			</ul>
 </div>
@@ -99,6 +149,8 @@ ul li {list-style-type: none;}
         </div>
     </div>
 </div>
-
+<p><a href="recommendations.html">
+<img border="0" alt="Next Page" src="prettyfish.png" width="200" height="100">
+</a></p>
 </body>
 </html>
