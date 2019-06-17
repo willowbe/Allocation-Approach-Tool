@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html>
+<style>
+#wrapper {width: 640px;overflow: auto;}
+ul li {list-style-type: none;}
+#approaches {width: 300px;float: left;}
+#selections {width: 330px;float: left;}
+</style>
 <body>
-  <h2>Test Section</h2>
-  <p id="display"></p>
-  <script>
-  var goal1 = {
-    name: "Name",
-    category: "Category",
-    goodFitFor: "Good Fit For",
-    essentials: "Essentials",
-    tradeOffs: "Potential Trade-Offs",
-    notes: "Notes"
-  };
-  document.getElementbyId("display").innerHTML = goal1.name;
-  </script>
+<script src="learning.js"></script>
+  <div id="wrapper">
+    <div id="content">
+
+        <div id="heading">
+            <h1 class="inline">An Excellent Choice!</h1>
+        </div>
+
+        <div id="selections">
+			<b>Pick a few:</b>
+			<ul class="goals"> <!-- previously apt-opper-->
+      <li >
+        <input type="checkbox" value="1" />
+        <label for="1">Addressing the needs of future generations</label>
+      </li>
+      <li >
+        <input type="checkbox" value="2" />
+        <label for="2">Countering undesirable social impacts of market momentum</label>
+      </li>
+      <li >
+        <input type="checkbox" value="3" />
+        <label for="3">Enhancing economic viability and security (reducing transaction costs?)</label>
+      </li>
+      <li >
+        <input type="checkbox" value="4" />
+        <label for="tPa">Ensuring the welfare of people dependent on the fishery</label>
+      </li>
+      <li >
+        <input type="checkbox" value="5" />
+        <label for="tZ">Facilitating inclusiveness and participation</label>
+      </li>
+      <li >
+        <input type="checkbox" value="6" />
+        <label for="6">Fostering adaptation and resilience</label>
+      </li>
+      <li >
+        <input type="checkbox" value="7" />
+        <label for="tU">Generating better and more diverse information for management</label>
+      </li>
+    <li >
+      <input type="checkbox" value="8" />
+      <label for="8">Improving collaboration, cooperation, and compliance</label>
+    </li>
+    <li >
+      <input type="checkbox" value="9" />
+      <label for="9">Incentivizing conservation</label>
+    </li>
+      <li >
+        <input type="checkbox" value="10" />
+        <label for="10">Procedural justice</label>
+      </li>
+      <li >
+        <input type="checkbox" value="11" />
+        <label for="11">Promoting social justice</label>
+      </li>
+      <li >
+        <input type="checkbox" value="12" />
+        <label for="12">Protecting the supporting ecosystem</label>
+      </li>
+      <li >
+        <input type="checkbox" value="13" />
+        <label for="13">Resolving conflict between marine sectors</label>
+      </li>
+			</ul>
+</div>
+
+        <div id="approaches"> <!-- previously aptresults-->
+			<div class="1 5 7 3">Result 1</div>
+			<div class="2 4 6 ">Result 2</div>
+			<div class="9 12 5 7 ">Result 3</div>
+			<div class="8 7 3 9 ">Result 4</div>
+			<div class="1 4 8 3">Result 5</div>
+			<div class="o100 tU p2 b100">Result 6</div>
+			<div class="o150 tV p3 b150">Result 7</div>
+			<div class="o200 tZ p4 b200">Result 8</div>
+			<div class="o50 tPe p3 b50">Result 9</div>
+			<div class="o100 tU p2 b100">Result 10</div>
+			<div class="o50 tU p1 b50">Result 11</div>
+			<div class="o100 tZ p2 b100">Result 12</div>
+			<div class="o150 tV p3 b150">Result 13</div>
+			<div class="o200 tPa p4 b200">Result 14</div>
+			<div class="o50 tPe p1 b50">Result 15</div>
+			<div class="o100 tU p2 b100">Result 16</div>
+			<div class="o150 tV p3 b150">Result 17</div>
+			<div class="o200 tZ p4 b200">Result 18</div>
+			<div class="o50 tZ p3 b150">Result 19</div>
+			<div class="o100 tU p2 b100">Result 20</div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
