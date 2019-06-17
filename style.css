@@ -74,5 +74,31 @@ font-family: Comfortaa;
 /* not sure if this works LOL*/
 .wrapper {width: 640px;overflow: auto;}
 ul li {list-style-type: none;}
-.approaches {width: 300px;float: left;}
-.selections {width: 330px;float: right;}
+.approaches {
+  width: 300px;
+  float: left;
+}
+.selections {
+  width: 330px;
+  float: right;
+
+}
+.goals{
+  text-align: left;
+}
+
+
+
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
