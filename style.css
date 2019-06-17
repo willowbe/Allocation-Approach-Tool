@@ -71,3 +71,8 @@ background-color: #EDF5E1;
 font-size: 75%;
 font-family: Comfortaa;
 }
+/* not sure if this works LOL*/
+.wrapper {width: 640px;overflow: auto;}
+ul li {list-style-type: none;}
+.approaches {width: 300px;float: left;}
+.selections {width: 330px;float: right;}
