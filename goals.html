@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<!--<style>
+#wrapper {width: 640px;overflow: auto;}
+ul li {list-style-type: none;}
+#approaches {width: 300px;float: left;}
+#selections {width: 330px;float: left;}
+</style>-->
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  color: #EDF5E1;
+  text-align: center;
+  border-radius: 12px;
+    padding: 3px;
+  background-color: #05386B;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="checkbox.js"></script>
+<link rel="icon"
+  type="image/ico"
+  href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Comfortaa">
+<title>Allocation Approach Selection Tool</title>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <div id="content">
+        <div id="heading">
+          <h2 style="text-align: center;">An excellent choice!</h2>
+                    <span><h4>Just kidding, you didn't really have a choice. Anyways, please check off the goals that are most important to your fishery.</h4></span>
+          		<h6>You'll receive recommendations for allocation approaches that best fit your needs!</h6>
+
+        </div>
+
+<div class="row">
+<br>
+  <div class="column">
+        <div id="selections">
+
+			<b>Pick a few:</b>
+			<ul class="sels"> <!-- previously apt-opper-->
+      <li >
+
+        <input type="checkbox" value="1" />
+        <label for="1">Addressing the needs of future generations
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Conserving nonrenewable resources for the future, helping renewable resources to recover, etc. </sup></sup></span></div>
+      </label>
+
+      </li>
+      <li >
+        <input type="checkbox" value="2" />
+        <label for="2">Countering undesirable social impacts of market momentum
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring that price changes that may affect people’s livelihoods are accounted for (?)</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="3" />
+        <label for="3">Enhancing economic viability and security (reducing transaction costs?)
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Reducing transaction costs, ensuring the fishery will be profitable in the future, providing job security to fishermen, etc.</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="4" />
+        <label for="4">Ensuring the welfare of people dependent on the fishery
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Providing them stable jobs in a healthy and profitable fishery</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="5" />
+        <label for="5">Facilitating inclusiveness and participation
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Making sure diverse demographics are represented by providing them opportunities to participate in the fishery</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="6" />
+        <label for="6">Fostering adaptation and resilience
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving the community’s ability to respond to and recover from change </sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="7" />
+        <label for="7">Generating better and more diverse information for management
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving data collection methods, gathering more comprehensive data about the fishery</sup></sup></span></div>
+      </label>
+      </li>
+    <li >
+      <input type="checkbox" value="8" />
+      <label for="8">Improving collaboration, cooperation, and compliance
+      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Helping the community to work together and follow the rules of the fishery</sup></sup></span></div>
+    </label>
+    </li>
+    <li >
+      <input type="checkbox" value="9" />
+      <label for="9">Incentivizing conservation
+      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Motivating members of the community to use resources mindfully to reduce waste</sup></sup></span></div>
+    </label>
+    </li>
+      <li >
+        <input type="checkbox" value="10" />
+        <label for="10">Procedural justice
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in allocation processes</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="11" />
+        <label for="11">Promoting social justice
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in wealth distribution and privileges</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="12" />
+        <label for="12">Protecting the supporting ecosystem
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>This means both the community of organisms as well as their surrounding environment</sup></sup></span></div>
+      </label>
+      </li>
+      <li >
+        <input type="checkbox" value="13" />
+        <label for="13">Resolving conflict between marine sectors
+        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Psst: <a href="http://fisherysolutionscenter.edf.org/virtual-fisheries-academy-e-courses" target="_blank" style= "color:#EDF5E1;">EDF's Virtual Fisheries Academy</a> has a great description of this!</sup></sup></span></div>
+      </label>
+      </li>
+			</ul>
+</div>
+</div>
+<div class="column">
+  <b>Your recommended approaches are:</b>
+        <div style="color: #05386B;" id="approaches" > <!-- previously aptresults-->
+          <div class="1 4 8">The Apprentice</div>
+          <div class="3 6 7 8 9 13">Aqua Salvage</div>
+          <div class="5 6 8 10 11">Average E-PUOP</div>
+          <div class="3 7 8 9 10 13">Banking on the Future</div>
+          <div class="4 5 12">Bingo-Lotto</div>
+          <div class="8 9 12">Bycatch PR</div>
+          <div class="4 8 12">Checkerboard</div>
+          <div class="7 9 12">Critical Habitat Bidding</div>
+          <div class="5 7">Crowdsource Allocation Formula Weights</div>
+          <div class="8 9 12">Democratic Reward</div>
+          <div class="4 5 8 11 13">Diverse and Representative Management Board</div>
+          <div class="2 9">Fish 2 Fork</div>
+          <div class="3 6 9">Flexible Portfolios</div>
+          <div class="2 3 4 6 7 9 12">The God Project</div>
+          <div class="1 2 3 4 6 8">Gotta Have a Plan</div>
+          <div class="4 5 10 11">Jigsaw</div>
+          <div class="1 3 4 8 9 10 11 12">Kitchen Sink</div>
+          <div class="1 5 11">Open Access for Social Justice</div>
+          <div class="5 8 10">Opt-In to RBM</div>
+          <div class="4 5 12">Outsiders Become Insiders</div>
+          <div class="3 5 6 7 9 12 13">Plan to Win</div>
+          <div class="1 9 12">Performance Review</div>
+          <div class="3 9">Piggy Bank</div>
+          <div class="5 9 10 11">President's Club</div>
+    			<div class="1 2 4">Scheduled Take-Backsies</div>
+    			<div class="9 11 13">Sliding Scale</div>
+          <div class="3 4 11">Social Justice Safety Net</div>
+          <div class="1 4 10 11">Social Pie</div>
+          <div class="1 3 4 7 9 12">Share the Ocean</div>
+          <div class="3 8 13">Temporal On/Off</div>
+          <div class="2 4 11">Tiered Auctions</div>
+          <div class="5 7 8">Transitional Pilot</div>
+    			<div class="3 6 11">Underutilized Potential</div>
+          <div class="3 4 8">Up the Chain</div>
+    			<div class="1 2 3 4 5 6 7 8 9 10 11 12 13">Weighted Lotto</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="5 7 9">The Fine Print</div>
+
+
+
+
+
+          <div class="8 9 12">We Rise and Fall Together</div>
+
+
+
+
+          <div class="7 8">Who's the Boss</div>
+          <div class="9 12">TURF Reserve Matrix</div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+<!--<p><a href="recommendations.html">
+<img border="0" alt="Next Page" src="prettyfish.png" width="200" height="100">
+</a></p>-->
+<p><a href="nextsteps.html">
+<h3><u>So, what's next?</u></h3>
+</a></p>
+</div>
+</body>
+</html>
