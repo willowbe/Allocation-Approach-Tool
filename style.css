@@ -16,10 +16,10 @@ height: 100%;
 width: 100%;
 }
 button {
-  background-color: #05386B;
+  background-color: black;
   border: none;
-  color: #EDF5E1;
-  padding: 15px 32px;
+  color: rgb(217,217,217);
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
