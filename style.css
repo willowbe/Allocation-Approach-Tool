@@ -76,14 +76,16 @@ ul li {list-style-type: none;}
 .approaches {
   width: 300px;
   float: left;
+  color: black;
 }
 .selections {
   width: 330px;
   float: right;
-
+  color: black;
 }
 .sels{
   text-align: left;
+  color: black;
 }
 
 
