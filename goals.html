@@ -1,390 +1,1492 @@
-<!DOCTYPE html>
-<html>
-<style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-  color: #8368AE;
-}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  color: rgb(217,217,217);
-  text-align: center;
-  border-radius: 12px;
-    padding: 3px;
-  background-color: black;
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 2;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-/* The Modal (background) */
-.modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-width: 50%; /* Full width */
-height: 50%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
-  /*background-color: rgb(0,0,0); /* Fallback color */
-/*  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-/*   padding-top: 100px; /* Location of the box */
-  /*  top: 50%;
-     left: 50%;
-     margin-right: 50%;*/
-/*  align-items: center;*/
-
-
-}
-/* Modal Content */
-.modal-content {
-  background-color: rgb(220,220,220);
-  margin: auto;
-  padding: 20px;
-  border: 3px solid black;
-  width: 80%;
-  font-size: 12px;
-  text-align: left;
-}
-/* Approach Title */
-.approach-title{
-text-align: center;
-}
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close2 {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-.close2:hover,
-.close2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
-
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-<script type="text/javascript" src="checkbox.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="icon"
   type="image/ico"
   href="favicon.ico">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Comfortaa">
-<title>Allocation Approach Selection Tool</title>
-</head>
-
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+<script src="checkboxtest.js"></script>
 <body>
-  <div id="wrapper">
-    <div id="content">
-        <div id="heading">
-          <h2 style="text-align: center; color: #8368AE;">An excellent choice!</h2>
-                    <p>Please check off the goals that are most important to your fishery.
-                    <br>
-                    You'll receive recommendations for allocation approaches that best fit your needs!
-                  </p>
 
-        </div>
-
+  <h2>An excellent choice!</h2>
+            <p>Please check off the goals that are most important to your fishery.
+            <br>
+            You'll receive recommendations for allocation approaches that best fit your needs!
+          </p>
 <div class="row">
-<br>
-  <div class="column">
-        <div id="selections">
-<form action="goals.php" method="POST">
-			<b>Pick a few:</b>
-			<ul class="sels"> <!-- previously apt-opper-->
-      <li >
-
-        <input type="checkbox" name = "1" value="1" />
-        <label for="1">Addressing the needs of future generations
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Conserving nonrenewable resources for the future, helping renewable resources to recover, etc. </sup></sup></span></div>
-      </label>
-
-      </li>
-      <li >
-        <input type="checkbox" name = "2" value="2" />
-        <label for="2">Countering undesirable social impacts of market momentum
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring that price changes that may affect people’s livelihoods are accounted for (?)</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "3" value="3" />
-        <label for="3">Enhancing economic viability and security (reducing transaction costs?)
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Reducing transaction costs, ensuring the fishery will be profitable in the future, providing job security to fishermen, etc.</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "4" value="4" />
-        <label for="4">Ensuring the welfare of people dependent on the fishery
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Providing them stable jobs in a healthy and profitable fishery</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "5" value="5" />
-        <label for="5">Facilitating inclusiveness and participation
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Making sure diverse demographics are represented by providing them opportunities to participate in the fishery</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "6" value="6" />
-        <label for="6">Fostering adaptation and resilience
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving the community’s ability to respond to and recover from change </sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "7" value="7" />
-        <label for="7">Generating better and more diverse information for management
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving data collection methods, gathering more comprehensive data about the fishery</sup></sup></span></div>
-      </label>
-      </li>
-    <li >
-      <input type="checkbox" name = "8" value="8" />
-      <label for="8">Improving collaboration, cooperation, and compliance
-      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Helping the community to work together and follow the rules of the fishery</sup></sup></span></div>
-    </label>
-    </li>
-    <li >
-      <input type="checkbox" name = "9" value="9" />
-      <label for="9">Incentivizing conservation
-      <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Motivating members of the community to use resources mindfully to reduce waste</sup></sup></span></div>
-    </label>
-    </li>
-      <li >
-        <input type="checkbox" name = "10" value="10" />
-        <label for="10">Procedural justice
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in allocation processes</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "11" value="11" />
-        <label for="11">Promoting social justice
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in wealth distribution and privileges</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "12" value="12" />
-        <label for="12">Protecting the supporting ecosystem
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>This means both the community of organisms as well as their surrounding environment</sup></sup></span></div>
-      </label>
-      </li>
-      <li >
-        <input type="checkbox" name = "13" value="13" />
-        <label for="13">Resolving conflict between marine sectors
-        <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Psst: <a href="http://fisherysolutionscenter.edf.org/virtual-fisheries-academy-e-courses" target="_blank" style= "color:#EDF5E1;">EDF's Virtual Fisheries Academy</a> has a great description of this!</sup></sup></span></div>
-      </label>
-      </li>
-			</ul>
-    </form>
-     <input type = "submit" value ="Submit">
-</div>
-</div>
 <div class="column">
+<div class="selections-wrap">
+  <b>Pick a few:</b>
+  <form>
+    <label>
+    <input type="checkbox" name="goal" value="1" id="1" />
+    Addressing the needs of future generations</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="2" id="2" />
+Countering undesirable social impacts of market momentum</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="3" id="3"/>
+    Enhancing economic viability and security (reducing transaction costs?)</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="4" id="4" />
+  Ensuring the welfare of people dependent on the fishery</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="5" id="5" />
+  Facilitating inclusiveness and participation</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="6" id="6"/>
+    Fostering adaptation and resilience</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="7" id="7"/>
+    Generating better and more diverse information for management</label>
+<br>
+<label>
+  <input type="checkbox" name = "goal" value="8" id="8"/>
+Improving collaboration, cooperation, and compliance</label>
+<br>
+<label>
+  <input type="checkbox" name = "goal" value="9" id="9" />
+  Incentivizing conservation</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="10" id="10"/>
+    Procedural justice</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="11" id="11"/>
+  Promoting social justice</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="12" id="12"/>
+    Protecting the supporting ecosystem</label>
+<br>
+<label>
+    <input type="checkbox" name = "goal" value="13" id="13"/>
+    Resolving conflict between marine sectors</label>
+<br>
+  </form>
+  </div>
+  </div>
   <b>Your recommended approaches are:</b>
-  <div style="color: black;" id="approaches" > <!-- previously aptresults-->
-    <div class="1 4 8 I">The Apprentice</div>
-    <div class="3 6 7 8 9 13 E">Aqua Salvage</div>
-    <div class="5 6 8 10 11 K">Average E-PUOP</div>
-    <div class="3 7 8 9 10 13 A">Banking on the Future</div>
-    <div class="4 5 12 B">Bingo-Lotto</div>
-    <div class="8 9 12 K">Bycatch PR</div>
-    <div class="4 8 12 N">Checkerboard</div>
-    <div class="7 9 12 G">Critical Habitat Bidding</div>
-    <div class="5 7 C">Crowdsource Allocation Formula Weights</div>
-    <div class="8 9 12 K">Democratic Reward</div>
-    <div class="4 5 8 11 13 C">Diverse and Representative Management Board</div>
-    <div class="2 9 H">Fish 2 Fork</div>
-    <div class="5 7 9 C">The Fine Print</div>
-    <div class="3 6 9 A">Flexible Portfolios</div>
-    <div class="2 3 4 6 7 9 12 E">The God Project</div>
-    <div class="1 2 3 4 6 8 H">Gotta Have a Plan</div>
-    <div class="4 5 10 11 H">Jigsaw</div>
-    <div class="1 3 4 8 9 10 11 12 C">Kitchen Sink</div>
-    <div class="1 5 11 M">Open Access for Social Justice</div>
-    <div class="5 8 10 D">Opt-In to RBM</div>
-    <div class="4 5 12 I">Outsiders Become Insiders</div>
-    <div class="3 5 6 7 9 12 13 H">Plan to Win</div>
-    <div class="1 9 12 K">Performance Review</div>
-    <div class="3 9 L">Piggy Bank</div>
-    <div class="5 9 10 11 K">President's Club</div>
-    <div class="1 2 4 A">Scheduled Take-Backsies</div>
-    <div class="9 11 13 A">Sliding Scale</div>
-    <div class="3 4 11 M">Social Justice Safety Net</div>
-    <div class="1 4 10 11 M">Social Pie</div>
-    <div class="1 3 4 7 9 12 J">Share the Ocean</div>
-    <div class="3 8 13 F">Temporal On/Off</div>
-    <div class="2 4 11 G">Tiered Auctions</div>
-    <div class="5 7 8 D">Transitional Pilot</div>
-    <div class="9 12 N">TURF Reserve Matrix</div>
-    <div class="3 6 11 A">Underutilized Potential</div>
-    <div class="3 4 8 H">Up the Chain</div>
-    <div class="8 9 12 K">We Rise and Fall Together</div>
-    <div class="1 2 3 4 5 6 7 8 9 10 11 12 13 B">Weighted Lotto</div>
-    <div class="7 8 M">Who's the Boss</div>
+  <div class="approaches">
 
+    <div class="approach" data-id="the-apprentice" data-category="1 4 8 I">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        The Apprentice
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
 
-    <button id="myBtn">Banking on the Future</button>
-
-    <!-- The Modal -->
-    <div id="myModal" >
-
-      <!-- Modal content -->
-      <div class="modal-content 3 7 8 9 10 13 A">
-        <span class="close 3 7 8 9 10 13 A">&times;</span>
-        <div class="approach-title 3 7 8 9 10 13 A">
-        <h2>Banking on the Future<h2>
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
-        <h3>Category: Future & Adaptation</h3>
-        <p>A participatory process is first used to achieve consensus on desired management strategy, based on upside projections. The projected yield for the chosen strategy is then allocated, via a multi-criterion allocation formula based on fishery values.</p>
-        <h3>Good Fit For: </h3>
-          <p>Species with a well-known life history that are resilient to shifts</p>
-
-        <h3>Essentials: </h3>
-        <ul>
-          <li>Information about the species to populate parameters for modeling</li>
-          <li>Willingness of community to collaborate/cooperate</li>
-          <li>Criteria for eligibility</li>
-        </ul>
-        <h3>Potential Trade-Offs: </h3>
-          <ul>
-            <li>Challenging for new entrants</li>
-          </ul>
-          <h3>Additional Notes: </h3>
-          <p>What happens if projections are too low? Too high? You need defaults.</p>
-      </div>
-
-    </div>
-
-
-    <button  id="myBtn2" >Flexible Portfolios</button>
-
-    <!-- The Modal -->
-    <div id="myModal2" >
-
-      <!-- Modal content -->
-      <div class="modal-content 3 6 9 A">
-        <span class="close2 3 6 9 A">&times;</span>
-        <div class="approach-title 3 6 9 A">
-        <h2>Flexible Portfolios<h2>
-        </div>
-        <h3>Category: Future & Adaptation</h3>
-        <p>Allocate shares of a multi-species fishery or species complex. Fishermen receive a % of the whole group of species (e.g., % of the “groundfish fishery” or of a “flatfish complex”). Then, assess stock status of each species each year and distribute actual pounds of each that can be caught that season. Permanent % shares are stable while the annual pounds fluctuate with abundance.</p>
-        <h3>Good Fit For: </h3>
-          <p>Multispecies fisheries, fisheries where species undergo wide swings in abundance </p>
-
-        <h3>Essentials: </h3>
-        <ul>
-          <li>Track abundance at species level</li>
-          <li>Track catch at species level</li>
-          <li>Administration capacity for changing quota pound amount annually</li>
-          <li>Ability and willingness of fishery participant to trade annual QP rapidly</li>
-        </ul>
-        <h3>Potential Trade-Offs: </h3>
-          <ul>
-            <li>May create challenge with fishery specialization/ niche, which can create challenges with economic viability</li>
-            <li>Requires a lot of data</li>
-          </ul>
-          <h3>Additional Notes: </h3>
-          <p>Further stability could be created if quotas straddle a larger space and substantially cover the full species ranges.</p>
       </div>
     </div>
 
+    <div class="approach" data-id="aqua-salvage" data-category="3 6 7 8 9 13 E">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Aqua Salvage
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
 
-
-
-
-    <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    var modal2 = document.getElementById("myModal2");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    var btn2 = document.getElementById("myBtn2");
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    var span2 = document.getElementsByClassName("close2")[0];
-
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-    modal.style.display = "block";
-    }
-    btn2.onclick = function() {
-    modal2.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    // THIS IS SUPER BUGGY. YOU SHOULD NOT HAVE TO MAKE TWO COPIES OF THE CLASS/METHODS TO GET IT TO WORK FOR EACH BUTTON!!!!!! FIX THIS
-    span.onclick = function() {
-    modal.style.display = "none";
-    modal2.style.display = "none";
-    }
-    span2.onclick = function() {
-    modal.style.display = "none";
-    modal2.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-    }
-    window.onclick = function(event) {
-    if (event.target == modal2) {
-      modal2.style.display = "none";
-    }
-    }
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="banking-on-the-future" data-category="3 7 8 9 10 13 A">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Banking on the Future
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Banking on the Future</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: Future & Adaptation</h3>
+              <p>A participatory process is first used to achieve consensus on desired management strategy, based on upside projections. The projected yield for the chosen strategy is then allocated, via a multi-criterion allocation formula based on fishery values.</p>
+              <h3>Good Fit For: </h3>
+                <p>Species with a well-known life history that are resilient to shifts</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>Information about the species to populate parameters for modeling</li>
+                <li>Willingness of community to collaborate/cooperate</li>
+                <li>Criteria for eligibility</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>Challenging for new entrants</li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>What happens if projections are too low? Too high? You need defaults.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="bingo-lotto" data-category="4 5 12 B">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Bingo-Lotto
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="bycatch-pr" data-category="8 9 12 K">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Bycatch PR
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="checkerboard" data-category="4 8 12 N">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Checkerboard
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="critical-habitat-bidding" data-category="7 9 12 G">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Critical Habitat Bidding
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="crowdsource-allocation-formula-weights" data-category="5 7 C">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Crowdsource Allocation Formula Weights
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="democratic-reward" data-category="8 9 12 K">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Democratic Reward
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="diverse-and-representative-management-board" data-category="4 5 8 11 13 C">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Diverse and Representative Management Board
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="fish-2-fork" data-category="2 9 H">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Fish 2 Fork
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="the-fine-print" data-category="5 7 9 C">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        The Fine Print
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="the-god-project" data-category="2 3 4 6 7 9 12 E">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        The God Project
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="gotta-have-a-plan" data-category="1 2 3 4 6 8 H">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Gotta Have a Plan
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="jigsaw" data-category="4 5 10 11 H">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+          Jigsaw
+        </button>
+        <div class="modal fade" id="mymodal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Name</h3>
+              </div>
+              <div class="modal-body">
+                <h3>Category: </h3>
+                <h3>Description: </h3>
+                <p>info</p>
+                <h3>Good Fit For: </h3>
+                  <p>info</p>
+
+                <h3>Essentials: </h3>
+                <ul>
+                  <li>thing 1</li>
+                  <li>thing 2</li>
+                  <li>thing 3</li>
+                </ul>
+                <h3>Potential Trade-Offs: </h3>
+                  <ul>
+                    <li>thing 1/li>
+                  </ul>
+                  <h3>Additional Notes: </h3>
+                  <p>info</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="approach" data-id="kitchen-sink" data-category="1 3 4 8 9 10 11 12 C">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+          Kitchen Sink
+        </button>
+        <div class="modal fade" id="mymodal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Name</h3>
+              </div>
+              <div class="modal-body">
+                <h3>Category: </h3>
+                <h3>Description: </h3>
+                <p>info</p>
+                <h3>Good Fit For: </h3>
+                  <p>info</p>
+
+                <h3>Essentials: </h3>
+                <ul>
+                  <li>thing 1</li>
+                  <li>thing 2</li>
+                  <li>thing 3</li>
+                </ul>
+                <h3>Potential Trade-Offs: </h3>
+                  <ul>
+                    <li>thing 1/li>
+                  </ul>
+                  <h3>Additional Notes: </h3>
+                  <p>info</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="approach" data-id="open-access-for-social-justice" data-category="1 5 11 M">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+            Open Access for Social Justice
+          </button>
+          <div class="modal fade" id="mymodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Name</h3>
+                </div>
+                <div class="modal-body">
+                  <h3>Category: </h3>
+                  <h3>Description: </h3>
+                  <p>info</p>
+                  <h3>Good Fit For: </h3>
+                    <p>info</p>
+
+                  <h3>Essentials: </h3>
+                  <ul>
+                    <li>thing 1</li>
+                    <li>thing 2</li>
+                    <li>thing 3</li>
+                  </ul>
+                  <h3>Potential Trade-Offs: </h3>
+                    <ul>
+                      <li>thing 1/li>
+                    </ul>
+                    <h3>Additional Notes: </h3>
+                    <p>info</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="approach" data-id="opt-in-to-rbm" data-category="5 8 10 D">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Opt-In to RBM
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="outsiders-become-insiders" data-category="4 5 12 I">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Outsiders Become Insiders
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="plan-to-win" data-category="3 5 6 7 9 12 13 H">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Plan to Win
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="performance-review" data-category="1 9 12 K">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Performance Review
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="piggy-bank" data-category="3 9 L">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Piggy Bank
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="presidents-club" data-category="5 9 10 11 K">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        President's Club
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="scheduled-take-backsies" data-category="1 2 4 A">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        The Apprentice
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="sliding-scale" data-category="9 11 13 A">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Sliding Scale
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="social-justice-safety-net" data-category="3 4 11 M">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Social Justice Safety Net
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="social-pie" data-category="1 4 10 11 M">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Social Pie
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="share-the-ocean" data-category="1 3 4 7 9 12 J">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Share the Ocean
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="temporal-on-off" data-category="3 8 13 F">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Temporal On/Off
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="tiered-auctions" data-category="2 4 11 G">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Tiered Auctions
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="transitional-pilot" data-category="5 7 8 D">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Transitional Pilot
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="turf-reserve-matrix" data-category="9 12 N">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        TURF Reserve Matrix
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="underutilized-potential" data-category="3 6 11 A">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Underutilized Potential
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="up-the-chain" data-category="3 4 8 H">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Up the Chain
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="we-rise-and-fall-together" data-category="8 9 12 K">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        We Rise and Fall Together
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="weighted-lotto" data-category="1 2 3 4 5 6 7 8 9 10 11 12 13 B">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Weighted Lotto
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="approach" data-id="whos-the-boss" data-category="7 8 M">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">
+        Who's the Boss?
+      </button>
+      <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Name</h3>
+            </div>
+            <div class="modal-body">
+              <h3>Category: </h3>
+              <h3>Description: </h3>
+              <p>info</p>
+              <h3>Good Fit For: </h3>
+                <p>info</p>
+
+              <h3>Essentials: </h3>
+              <ul>
+                <li>thing 1</li>
+                <li>thing 2</li>
+                <li>thing 3</li>
+              </ul>
+              <h3>Potential Trade-Offs: </h3>
+                <ul>
+                  <li>thing 1/li>
+                </ul>
+                <h3>Additional Notes: </h3>
+                <p>info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
-</div>
-
-</div>
 
 
 
@@ -392,9 +1494,23 @@ href="https://fonts.googleapis.com/css?family=Comfortaa">
 
 
 
-<p><a href="nextsteps.html">
-<h3><u>So, what's next?</u></h3>
-</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!--approaches-->
 </div>
 </body>
-</html>
