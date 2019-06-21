@@ -9,48 +9,47 @@ margin-bottom: 1rem;
   font-weight: 300;
   line-height: 1.5;
 text-align: center;
-background-color: #5CDB95;
+background-color: rgb(217,217,217);
 }
 #body {
 height: 100%;
 width: 100%;
 }
 button {
-  background-color: #05386B;
+  background-color: black;
   border: none;
-  color: #EDF5E1;
-  padding: 15px 32px;
+  color: rgb(217,217,217);
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: Comfortaa;
+  font-family: Arial;
   border-radius: 8px;
 }
-h1{
-color: #05386B;
-font-family: Comfortaa;
+h1, h2{
+color: rgb(0,159,218);
+font-family: Arial;
 font-size: 300%;
 margin: 0px;
 }
-h2{
-color: #05386B;
-font-size: 300%;
-margin: 0px;
-}
+
 h4, h6{
-color: #EDF5E1;
+color: black;
 font-size: 160%;
 margin: 0px;
 }
+h3{
+  font-family: Arial;
+}
 p{
-color: #EDF5E1;
-font-family: Comfortaa;
+color: black;
+font-family: Arial;
 font-size: 160%;
 }
 body {
-  font-family: Comfortaa, sans-serif;
-  background-color: #5CDB95;
+  font-family: Arial, sans-serif;
+
   margin: 0;
 }
 .importance{
@@ -62,14 +61,14 @@ color: #05386B;
 text-align: center;
 }
 .tooltip{
-color: #EDF5E1;
-font-family: Comfortaa;
+color: rgb(0,159,218);
+font-family: Arial;
 }
 select{
 color: #05386B;
 background-color: #EDF5E1;
 font-size: 75%;
-font-family: Comfortaa;
+font-family: Arial;
 }
 /* not sure if this works LOL*/
 .wrapper {width: 640px;overflow: auto;}
@@ -77,14 +76,16 @@ ul li {list-style-type: none;}
 .approaches {
   width: 300px;
   float: left;
+  color: black;
 }
 .selections {
   width: 330px;
   float: right;
-
+  color: black;
 }
 .sels{
   text-align: left;
+  color: black;
 }
 
 
@@ -92,7 +93,7 @@ ul li {list-style-type: none;}
 
 
 .column {
-  color: #05386B;
+  color: black;
   float: left;
   width: 50%;
 }

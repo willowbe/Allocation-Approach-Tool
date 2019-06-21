@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
-<!--<style>
-#wrapper {width: 640px;overflow: auto;}
-ul li {list-style-type: none;}
-#approaches {width: 300px;float: left;}
-#selections {width: 330px;float: left;}
-</style>-->
 <style>
 .tooltip {
   position: relative;
   display: inline-block;
+  color: #8368AE;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
-  color: #EDF5E1;
+  color: rgb(217,217,217);
   text-align: center;
   border-radius: 12px;
     padding: 3px;
-  background-color: #05386B;
+  background-color: black;
 
   /* Position the tooltip */
   position: absolute;
@@ -28,6 +23,67 @@ ul li {list-style-type: none;}
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+width: 50%; /* Full width */
+height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+  /*background-color: rgb(0,0,0); /* Fallback color */
+/*  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/*   padding-top: 100px; /* Location of the box */
+  /*  top: 50%;
+     left: 50%;
+     margin-right: 50%;*/
+/*  align-items: center;*/
+
+
+}
+/* Modal Content */
+.modal-content {
+  background-color: rgb(220,220,220);
+  margin: auto;
+  padding: 20px;
+  border: 3px solid black;
+  width: 80%;
+  font-size: 12px;
+  text-align: left;
+}
+/* Approach Title */
+.approach-title{
+text-align: center;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
 
@@ -49,9 +105,11 @@ href="https://fonts.googleapis.com/css?family=Comfortaa">
   <div id="wrapper">
     <div id="content">
         <div id="heading">
-          <h2 style="text-align: center;">An excellent choice!</h2>
-                    <span><h4>Please check off the goals that are most important to your fishery.</h4></span>
-          		<h6>You'll receive recommendations for allocation approaches that best fit your needs!</h6>
+          <h2 style="text-align: center; color: #8368AE;">An excellent choice!</h2>
+                    <p>Please check off the goals that are most important to your fishery.
+                    <br>
+                    You'll receive recommendations for allocation approaches that best fit your needs!
+                  </p>
 
         </div>
 
@@ -59,95 +117,97 @@ href="https://fonts.googleapis.com/css?family=Comfortaa">
 <br>
   <div class="column">
         <div id="selections">
-
+<form action="goals.php" method="POST">
 			<b>Pick a few:</b>
 			<ul class="sels"> <!-- previously apt-opper-->
       <li >
 
-        <input type="checkbox" value="1" />
+        <input type="checkbox" name = "1" value="1" />
         <label for="1">Addressing the needs of future generations
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Conserving nonrenewable resources for the future, helping renewable resources to recover, etc. </sup></sup></span></div>
       </label>
 
       </li>
       <li >
-        <input type="checkbox" value="2" />
+        <input type="checkbox" name = "2" value="2" />
         <label for="2">Countering undesirable social impacts of market momentum
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring that price changes that may affect people’s livelihoods are accounted for (?)</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="3" />
+        <input type="checkbox" name = "3" value="3" />
         <label for="3">Enhancing economic viability and security (reducing transaction costs?)
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Reducing transaction costs, ensuring the fishery will be profitable in the future, providing job security to fishermen, etc.</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="4" />
+        <input type="checkbox" name = "4" value="4" />
         <label for="4">Ensuring the welfare of people dependent on the fishery
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Providing them stable jobs in a healthy and profitable fishery</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="5" />
+        <input type="checkbox" name = "5" value="5" />
         <label for="5">Facilitating inclusiveness and participation
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Making sure diverse demographics are represented by providing them opportunities to participate in the fishery</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="6" />
+        <input type="checkbox" name = "6" value="6" />
         <label for="6">Fostering adaptation and resilience
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving the community’s ability to respond to and recover from change </sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="7" />
+        <input type="checkbox" name = "7" value="7" />
         <label for="7">Generating better and more diverse information for management
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Improving data collection methods, gathering more comprehensive data about the fishery</sup></sup></span></div>
       </label>
       </li>
     <li >
-      <input type="checkbox" value="8" />
+      <input type="checkbox" name = "8" value="8" />
       <label for="8">Improving collaboration, cooperation, and compliance
       <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Helping the community to work together and follow the rules of the fishery</sup></sup></span></div>
     </label>
     </li>
     <li >
-      <input type="checkbox" value="9" />
+      <input type="checkbox" name = "9" value="9" />
       <label for="9">Incentivizing conservation
       <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Motivating members of the community to use resources mindfully to reduce waste</sup></sup></span></div>
     </label>
     </li>
       <li >
-        <input type="checkbox" value="10" />
+        <input type="checkbox" name = "10" value="10" />
         <label for="10">Procedural justice
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in allocation processes</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="11" />
+        <input type="checkbox" name = "11" value="11" />
         <label for="11">Promoting social justice
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Ensuring fairness in wealth distribution and privileges</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="12" />
+        <input type="checkbox" name = "12" value="12" />
         <label for="12">Protecting the supporting ecosystem
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>This means both the community of organisms as well as their surrounding environment</sup></sup></span></div>
       </label>
       </li>
       <li >
-        <input type="checkbox" value="13" />
+        <input type="checkbox" name = "13" value="13" />
         <label for="13">Resolving conflict between marine sectors
         <div class="tooltip"><sup><sup><u>[info]</u></sup></sup><span class="tooltiptext"><sup><sup>Psst: <a href="http://fisherysolutionscenter.edf.org/virtual-fisheries-academy-e-courses" target="_blank" style= "color:#EDF5E1;">EDF's Virtual Fisheries Academy</a> has a great description of this!</sup></sup></span></div>
       </label>
       </li>
 			</ul>
+    </form>
+     <input type = "submit" value ="Submit">
 </div>
 </div>
 <div class="column">
   <b>Your recommended approaches are:</b>
-  <div style="color: #05386B;" id="approaches" > <!-- previously aptresults-->
+  <div style="color: black;" id="approaches" > <!-- previously aptresults-->
     <div class="1 4 8 I">The Apprentice</div>
     <div class="3 6 7 8 9 13 E">Aqua Salvage</div>
     <div class="5 6 8 10 11 K">Average E-PUOP</div>
@@ -189,6 +249,128 @@ href="https://fonts.googleapis.com/css?family=Comfortaa">
     <div class="7 8 M">Who's the Boss</div>
 
 
+    <button id="myBtn">Banking on the Future</button>
+
+    <!-- The Modal -->
+    <div id="myModal" >
+
+      <!-- Modal content -->
+      <div class="modal-content 3 7 8 9 10 13 A">
+        <span class="close 3 7 8 9 10 13 A">&times;</span>
+        <div class="approach-title 3 7 8 9 10 13 A">
+        <h2>Banking on the Future<h2>
+        </div>
+        <h3>Category: Future & Adaptation</h3>
+        <p>A participatory process is first used to achieve consensus on desired management strategy, based on upside projections. The projected yield for the chosen strategy is then allocated, via a multi-criterion allocation formula based on fishery values.</p>
+        <h3>Good Fit For: </h3>
+          <p>Species with a well-known life history that are resilient to shifts</p>
+
+        <h3>Essentials: </h3>
+        <ul>
+          <li>Information about the species to populate parameters for modeling</li>
+          <li>Willingness of community to collaborate/cooperate</li>
+          <li>Criteria for eligibility</li>
+        </ul>
+        <h3>Potential Trade-Offs: </h3>
+          <ul>
+            <li>Challenging for new entrants</li>
+          </ul>
+          <h3>Additional Notes: </h3>
+          <p>What happens if projections are too low? Too high? You need defaults.</p>
+      </div>
+
+    </div>
+
+
+    <button  id="myBtn2" >Flexible Portfolios</button>
+
+    <!-- The Modal -->
+    <div id="myModal2" >
+
+      <!-- Modal content -->
+      <div class="modal-content 3 6 9 A">
+        <span class="close2 3 6 9 A">&times;</span>
+        <div class="approach-title 3 6 9 A">
+        <h2>Flexible Portfolios<h2>
+        </div>
+        <h3>Category: Future & Adaptation</h3>
+        <p>Allocate shares of a multi-species fishery or species complex. Fishermen receive a % of the whole group of species (e.g., % of the “groundfish fishery” or of a “flatfish complex”). Then, assess stock status of each species each year and distribute actual pounds of each that can be caught that season. Permanent % shares are stable while the annual pounds fluctuate with abundance.</p>
+        <h3>Good Fit For: </h3>
+          <p>Multispecies fisheries, fisheries where species undergo wide swings in abundance </p>
+
+        <h3>Essentials: </h3>
+        <ul>
+          <li>Track abundance at species level</li>
+          <li>Track catch at species level</li>
+          <li>Administration capacity for changing quota pound amount annually</li>
+          <li>Ability and willingness of fishery participant to trade annual QP rapidly</li>
+        </ul>
+        <h3>Potential Trade-Offs: </h3>
+          <ul>
+            <li>May create challenge with fishery specialization/ niche, which can create challenges with economic viability</li>
+            <li>Requires a lot of data</li>
+          </ul>
+          <h3>Additional Notes: </h3>
+          <p>Further stability could be created if quotas straddle a larger space and substantially cover the full species ranges.</p>
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modal2 = document.getElementById("myModal2");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    btn2.onclick = function() {
+    modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    // THIS IS SUPER BUGGY. YOU SHOULD NOT HAVE TO MAKE TWO COPIES OF THE CLASS/METHODS TO GET IT TO WORK FOR EACH BUTTON!!!!!! FIX THIS
+    span.onclick = function() {
+    modal.style.display = "none";
+    modal2.style.display = "none";
+    }
+    span2.onclick = function() {
+    modal.style.display = "none";
+    modal2.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+    }
+    window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -198,11 +380,18 @@ href="https://fonts.googleapis.com/css?family=Comfortaa">
 
         </div>
     </div>
+
+
 </div>
+
 </div>
-<!--<p><a href="recommendations.html">
-<img border="0" alt="Next Page" src="prettyfish.png" width="200" height="100">
-</a></p>-->
+
+
+
+
+
+
+
 <p><a href="nextsteps.html">
 <h3><u>So, what's next?</u></h3>
 </a></p>
