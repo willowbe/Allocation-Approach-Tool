@@ -105,7 +105,9 @@ ul li {list-style-type: none;}
   color: black;
 }
 
-
+.modal-header{
+  text-align: center;
+}
 
 
 
