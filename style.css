@@ -15,11 +15,24 @@ background-color: rgb(217,217,217);
 height: 100%;
 width: 100%;
 }
-button {
-  background-color: black;
-  border: none;
-  color: rgb(217,217,217);
+.btn{
+  background-color: rgb(217,217,217);
+  border: 15px;
+  border-color: black;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial;
+  border-radius: 8px;
+  font-style: italic;
+}
 
+button {
+  background-color: rgb(217,217,217);
+  border: none;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -33,14 +46,17 @@ font-family: Arial;
 font-size: 300%;
 margin: 0px;
 }
-
+h1{
+  text-align: center;
+}
 h4, h6{
 color: black;
 font-size: 160%;
 margin: 0px;
 }
-h3{
+h3,ol{
   font-family: Arial;
+  text-align: left;
 }
 p{
 color: black;
@@ -65,8 +81,8 @@ color: rgb(0,159,218);
 font-family: Arial;
 }
 select{
-color: #05386B;
-background-color: #EDF5E1;
+color: rgb(217,217,217);
+background-color: white;
 font-size: 75%;
 font-family: Arial;
 }
@@ -77,6 +93,7 @@ ul li {list-style-type: none;}
   width: 300px;
   float: left;
   color: black;
+  text-align: center;
 }
 .selections {
   width: 330px;
