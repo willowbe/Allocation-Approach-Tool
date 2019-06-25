@@ -28,7 +28,29 @@ p{
   background-color: rgb(217,217,217);
 
 }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  color: #8368AE;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  color: rgb(217,217,217);
+  text-align: center;
+  border-radius: 12px;
+    padding: 3px;
+  background-color: black;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 </style>
 </head>
 <body>
