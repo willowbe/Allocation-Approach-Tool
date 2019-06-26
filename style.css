@@ -111,12 +111,22 @@ ul li {list-style-type: none;}
 
 
 
-.column {
+.column-left{
   color: black;
-  float: left;
-  width: 50%;
+  width: 33.3%;
   text-align: left;
 }
+.column-middle{
+  color: black;
+  width: 33.3%;
+  text-align: center;
+}
+.column-right{
+  color: black;
+  width: 33.3%;
+  text-align: left;
+}
+
 
 /* Clear floats after the columns */
 .row:after {

@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   var $filterCheckboxes = $('input[type="checkbox"]');
   $filterCheckboxes.on('change', function() {
     var selectedFilters = {};
@@ -7,6 +8,11 @@ $( document ).ready(function() {
         selectedFilters[this.name] = [];
       }
       selectedFilters[this.name].push(this.value);
+      if($(selectedFilters).prop('checked') == false){
+        $('.approach').hide();
+      }
+
+
     });
     // create a collection containing all of the filterable elements
     var $filteredResults = $('.approach');
@@ -16,7 +22,7 @@ $( document ).ready(function() {
       $filteredResults = $filteredResults.filter(function() {
         var matched = false,
         currentFilterValues = $(this).data('category').split(' ');
-        // loop over each category value in the current .flower's data-category
+        // loop over each category value in the current .approach's data-category
         $.each(currentFilterValues, function(_, currentFilterValue) {
           // if the current category exists in the selected filters array
           // set matched to true, and stop looping. as we're ORing in each
@@ -26,12 +32,15 @@ $( document ).ready(function() {
             return false;
           }
         });
-        // if matched is true the current .flower element is returned
+        // if matched is true the current .approach element is returned
         return matched;
       });
     });
     $('.approach').hide().filter($filteredResults).show();
   });
+
+
+
   function uncheckAll() {
   $("input[type='checkbox']:checked").prop("checked", false)
 }
