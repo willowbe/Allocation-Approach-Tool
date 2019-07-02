@@ -2,6 +2,9 @@ $( document ).ready(function() {
 
   var $filterCheckboxes = $('input[type="checkbox"]');
   $filterCheckboxes.on('change', function() {
+
+
+
     var selectedFilters = {};
     $filterCheckboxes.filter(':checked').each(function() {
       if (!selectedFilters.hasOwnProperty(this.name)) {
@@ -37,12 +40,14 @@ $( document ).ready(function() {
       });
     });
     $('.approach').hide().filter($filteredResults).show();
+
   });
 
 
 
   function uncheckAll() {
-  $("input[type='checkbox']:checked").prop("checked", false)
+  $("input[type='checkbox']:checked").prop('checked', false)
+
 }
 $(':button').on('click', uncheckAll)
 });
