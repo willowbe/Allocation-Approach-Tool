@@ -3,8 +3,6 @@ $( document ).ready(function() {
   var $filterCheckboxes = $('input[type="checkbox"]');
   $filterCheckboxes.on('change', function() { //can we just filter all the time?
 
-
-
     var selectedFilters = {};
     $filterCheckboxes.filter(':checked').each(function() {
       if (!selectedFilters.hasOwnProperty(this.name)) {
@@ -49,5 +47,5 @@ $( document ).ready(function() {
   $("input[type='checkbox']:checked").prop('checked', false)
 
 }
-$(':button').on('click', uncheckAll)
+$('.clear').on('click', uncheckAll)
 });
