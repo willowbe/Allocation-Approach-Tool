@@ -1,8 +1,13 @@
+
 $( document ).ready(function() {
 
-  var $filterCheckboxes = $('input[type="checkbox"]');
-  $filterCheckboxes.on('change', function() { //can we just filter all the time?
+$('.approach').hide();
 
+
+
+  var $filterCheckboxes = $('input[type="checkbox"]');
+  //$filterCheckboxes.on('change', function() { //can we just filter all the time?
+$filterCheckboxes.on('change', function() { //can we just filter all the time?
     var selectedFilters = {};
     $filterCheckboxes.filter(':checked').each(function() {
       if (!selectedFilters.hasOwnProperty(this.name)) {
@@ -15,12 +20,13 @@ $( document ).ready(function() {
 
 
     });
+
     // create a collection containing all of the filterable elements
-    var $filteredResults = $('.approach');
+    var $filteredResults = {};
     // loop over the selected filter name -> (array) values pairs
     $.each(selectedFilters, function(name, filterValues) {
-      // filter each .flower element
-      $filteredResults = $filteredResults.filter(function() {
+      // filter each .approach element
+      $filteredResults = $('.approach').filter(function() {
         var matched = false,
         currentFilterValues = $(this).data('category').split(' ');
         // loop over each category value in the current .approach's data-category
@@ -37,15 +43,21 @@ $( document ).ready(function() {
         return matched;
       });
     });
-    $('.approach').hide().filter($filteredResults).show();
+    if (selectedFilters.length ==0){
+      $('.approach').hide();
+    }
+    else{
+  //  $('.approach').hide().filter($filteredResults).show();
+$('.approach').hide();
+($filteredResults).show();
 
+}
   });
 
 
 
   function uncheckAll() {
   $("input[type='checkbox']:checked").prop('checked', false)
-
 }
 $('.clear').on('click', uncheckAll)
 });
