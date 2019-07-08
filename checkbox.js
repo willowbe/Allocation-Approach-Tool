@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   var $filterCheckboxes = $('input[type="checkbox"]');
-  $filterCheckboxes.on('change', function() {
+  $filterCheckboxes.on('change', function() { //can we just filter all the time?
 
 
 
