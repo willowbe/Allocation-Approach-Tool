@@ -1,6 +1,6 @@
 
 $( document ).ready(function() {
-
+$('input:checkbox').prop('checked', false);
 $('.approach').hide();
 
 
