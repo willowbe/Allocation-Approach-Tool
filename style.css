@@ -121,12 +121,21 @@ ul li {list-style-type: none;}
 
 
 
-.column{
+.column1{
   color: black;
-  width: 50%;
+  width: 40%;
   text-align: left;
 }
-
+.column2{
+  color: black;
+  width: 40%;
+  text-align: center;
+}
+.column3{
+  color: black;
+  width: 20%;
+  text-align: left;
+}
 
 
 /* Clear floats after the columns */
